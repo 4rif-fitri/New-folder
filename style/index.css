@@ -1,0 +1,16 @@
+#wrapper>section {
+	padding: 1rem;
+	background-color: lightgrey;
+	overflow-y: auto;
+}
+.box-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+}
+section >.box-container > .box{
+	width: 200px;
+	height: 200px;
+	background-color: #fff;
+}

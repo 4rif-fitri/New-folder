@@ -3,10 +3,10 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 }
-main{
-}
+
 main{
 	height: 100vh;
+	overflow: hidden;
 }
 
 header{
@@ -42,23 +42,23 @@ header > nav{
 }
 #wrapper{
 	display: flex;
-	width: 100%;
 	height: calc(100% - 4rem);
 }
+#wrapper>aside>* {
+	visibility: hidden;
+}
 #wrapper > aside{
-	width: 200px;
-	/* width: 0px; */
-	height: 100%;
+	/* width: 200px; */
 	background-color: #555555;
+	width: 0px;
+	height: 100vh;
 	transition: all 0.2s ease-in-out;
 }
 #hamburgur:checked ~ aside{
 	width: 200px;
 }
-#wrapper > section{
-	height: 100%;
-	flex: 1;
-	padding: 1rem;
+#hamburgur:checked~aside > *{
+	visibility: visible;
 }
 #wrapper > aside > ul{
 	width: 100%;
@@ -66,11 +66,16 @@ header > nav{
 }
 #wrapper>aside>ul>li{
 	display: flex;
-	text-align: center;
 }
 #wrapper>aside>ul>li>a{
 	color: #e9e9e9;
 	width: 100%;
 	text-decoration: none;
 	padding: 1rem;
+}
+#wrapper>section {
+	height: 100%;
+	flex: 1;
+	padding: 1rem;
+	background-color: lightgrey;
 }
