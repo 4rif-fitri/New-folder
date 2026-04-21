@@ -49,7 +49,6 @@ let boxsAction = document.querySelectorAll(".boxAction");
 let boxSumAction = document.querySelectorAll(".boxSumAction");
 let boxSum = document.querySelector(".boxSum");
 let choiseItems = document.querySelectorAll(".choise-item");
-let choiseGroup = document.querySelector(".choise-group");
 
 let updateTextMessage = (text) => {
 	textMessage.textContent = text;
@@ -674,25 +673,12 @@ let reset = () => {
 	choiseItems.forEach((item) => removeListerner(item, "click", handleSumBorrow));
 	choiseItems.forEach((item) => removeListerner(item, "click", handleTotal));
 
-
-
 	updateStatus();
 	initChooseBigger()
 }
 
-let renderGame = () => {
-	let app = document.getElementById("app")
-	let t = style
-	t += template
-	app.insertAdjacentHTML("beforeend", t);
-}
-
-let homePage = () => {
-	app()
-}
 
 let initBorrow = () => {
-	// renderGame()
 
 	textMessage = document.getElementById("textMessage")
 	boxsSoalan = document.querySelectorAll(".boxSoalan");
@@ -700,12 +686,13 @@ let initBorrow = () => {
 	boxSumAction = document.querySelectorAll(".boxSumAction");
 	boxSum = document.querySelector(".boxSum");
 	choiseItems = document.querySelectorAll(".choise-item");
-	choiseGroup = document.querySelector(".choise-group");
+	choiseGroup = document.querySelector(".choices");
+	choiseGroup.style.opacity = 0
 
 	updateStatus()
 	randomInit();
 	ramalan();
-	console.log({ flow });
+	// console.log({ flow });
 	textNumberQuestion();
 	initChooseBigger();
 

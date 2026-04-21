@@ -11,7 +11,7 @@ section {
 
 .moniter {
 	width: 100%;
-	margin: 2rem 0;
+	margin: 1rem 0;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	place-items: center;
@@ -34,7 +34,7 @@ section {
 .board {
 	background-color: #fff;
 	padding: 0 3rem;
-	margin: 2rem 0;
+	margin: 1rem 0;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
@@ -48,7 +48,7 @@ section {
 }
 
 .choices {
-	margin: 2rem 0;
+	margin: 1rem 0;
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(3, 1fr);
@@ -59,7 +59,7 @@ section {
 }
 
 .btn-container {
-	margin: 2rem 0 0 0;
+	margin: 1rem 0 0 0;
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(2, 1fr);
