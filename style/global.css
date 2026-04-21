@@ -1,0 +1,76 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+main{
+}
+main{
+	height: 100vh;
+}
+
+header{
+	height: 4rem;
+	background-color: #f1f1f1;
+}
+header > nav{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.hamburgur{
+	position: absolute;
+	left: 0;
+	height: 100%;
+	aspect-ratio: 1 / 1;
+	display: flex;
+	flex-direction: column;
+	gap: .4rem;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.bar{
+	width: 50%;
+	height: 3px;
+	background-color: black;
+	border-radius: 14px;
+	transition: all 0.2s ease-in-out;
+}
+#wrapper{
+	display: flex;
+	width: 100%;
+	height: calc(100% - 4rem);
+}
+#wrapper > aside{
+	width: 200px;
+	/* width: 0px; */
+	height: 100%;
+	background-color: #555555;
+	transition: all 0.2s ease-in-out;
+}
+#hamburgur:checked ~ aside{
+	width: 200px;
+}
+#wrapper > section{
+	height: 100%;
+	flex: 1;
+	padding: 1rem;
+}
+#wrapper > aside > ul{
+	width: 100%;
+	height: 100%;
+}
+#wrapper>aside>ul>li{
+	display: flex;
+	text-align: center;
+}
+#wrapper>aside>ul>li>a{
+	color: #e9e9e9;
+	width: 100%;
+	text-decoration: none;
+	padding: 1rem;
+}
