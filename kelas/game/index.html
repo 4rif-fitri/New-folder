@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: lightblue;
+			overflow: hidden;
+		}
+
+		.game-container {
+			position: relative;
+			width: 352px;
+			height: 198px;
+			margin: auto;
+			outline: 1px solid black;
+			transform: scale(3) translateY(50%);
+		}
+
+		.game-container canvas {
+			image-rendering: pixelated;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="game-container">
+		<canvas class="game-canvas" width="352" height="198">
+
+		</canvas>
+	</div>
+	<script src="./DirectionInput.js"></script>
+	<script src="./Sprite.js"></script>
+	<script src="./utils/utils.js"></script>
+	<script src="./Objects/GameObject.js"></script>
+	<script src="./Objects/Subject.js"></script>
+	<script src="./Objects/Check.js"></script>
+	<script src="./Objects/Reset.js"></script>
+	<script src="./Objects/Box.js"></script>
+	<script src="./Objects/Trap.js"></script>
+	<script src="./Objects/Person.js"></script>
+	<script src="./OverworldMap.js"></script>
+	<script src="./Overworld.js"></script>
+	<script src="./init.js"></script>
+</body>
+
+</html>

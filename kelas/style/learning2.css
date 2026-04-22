@@ -124,6 +124,7 @@ section {
 
 
 .dialog {
+	padding: 0.5rem;
 	position: absolute;
 	top: 42%;
 	left: 25%;

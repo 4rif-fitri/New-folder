@@ -26,19 +26,19 @@ let move = async (n1, n2) => {
 		document.querySelector(".box2 h2").textContent = number2
 		
 		for (let index = 0; index < beza; index++) {
+			let apples = box2.querySelectorAll(".apple")
+			apples[apples.length - 1].style.scale = 0;
+			await delay(100)
+			apples[apples.length - 1].remove()
+		}
+		
+		for (let index = 0; index < beza; index++) {
 			let div = document.createElement("div")
 			div.classList.add("apple")
 			box1.querySelector(".boxapple").appendChild(div)
 			div.style.scale = 0;
 			await delay(100)
-
 			div.style.scale = 1;
-		}
-		for (let index = 0; index < beza; index++) {
-			let apples = box2.querySelectorAll(".apple")
-			apples[apples.length - 1].style.scale = 0;
-			await delay(100)
-			apples[apples.length - 1].remove()
 		}
 
 	} else {
@@ -51,6 +51,13 @@ let move = async (n1, n2) => {
 		let number2 = parseInt(box2.querySelector("h2").textContent)
 		number2 += beza
 		document.querySelector(".box2 h2").textContent = number2
+		
+		for (let index = 0; index < beza; index++) {
+			let apples = box1.querySelectorAll(".apple")
+			apples[apples.length - 1].style.scale = 0;
+			await delay(100)
+			apples[apples.length - 1].remove()
+		}
 
 		for (let index = 0; index < beza; index++) {
 			let div = document.createElement("div")
@@ -59,13 +66,6 @@ let move = async (n1, n2) => {
 			div.style.scale = 0;
 			await delay(100)
 			div.style.scale = 1;
-
-		}
-		for (let index = 0; index < beza; index++) {
-			let apples = box1.querySelectorAll(".apple")
-			apples[apples.length - 1].style.scale = 0;
-			await delay(100)
-			apples[apples.length - 1].remove()
 		}
 	}
 }
