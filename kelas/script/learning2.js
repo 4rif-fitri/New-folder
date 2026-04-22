@@ -9,11 +9,14 @@ let box2 = document.querySelector(".box2")
 
 let step = 0
 
-let move = (n1, n2) => {
+let delay = (masa) => new Promise(resolve => setTimeout(resolve, masa))
+
+let move = async (n1, n2) => {
 
 
 	if (n1 > n2) {
 		let beza = 10 - n1
+		
 		let number1 = parseInt(box1.querySelector("h2").textContent)
 		number1 += beza
 		document.querySelector(".box1 h2").textContent = number1
@@ -21,20 +24,26 @@ let move = (n1, n2) => {
 		let number2 = parseInt(box2.querySelector("h2").textContent)
 		number2 -= beza
 		document.querySelector(".box2 h2").textContent = number2
-
-
+		
 		for (let index = 0; index < beza; index++) {
 			let div = document.createElement("div")
 			div.classList.add("apple")
 			box1.querySelector(".boxapple").appendChild(div)
+			div.style.scale = 0;
+			await delay(100)
+
+			div.style.scale = 1;
 		}
 		for (let index = 0; index < beza; index++) {
 			let apples = box2.querySelectorAll(".apple")
+			apples[apples.length - 1].style.scale = 0;
+			await delay(100)
 			apples[apples.length - 1].remove()
 		}
 
 	} else {
 		let beza = 10 - n2
+		console.log(beza);
 
 		let number1 = parseInt(box1.querySelector("h2").textContent)
 		number1 -= beza
@@ -47,9 +56,15 @@ let move = (n1, n2) => {
 			let div = document.createElement("div")
 			div.classList.add("apple")
 			box2.querySelector(".boxapple").appendChild(div)
+			div.style.scale = 0;
+			await delay(100)
+			div.style.scale = 1;
+
 		}
 		for (let index = 0; index < beza; index++) {
 			let apples = box1.querySelectorAll(".apple")
+			apples[apples.length - 1].style.scale = 0;
+			await delay(100)
 			apples[apples.length - 1].remove()
 		}
 	}
@@ -61,6 +76,7 @@ let reset = (num1, num2) => {
 	let b1 = box1.querySelectorAll(".apple")
 	for (let index = 0; index < b1.length; index++) {
 		b1[index].remove()
+
 	}
 
 	let b2 = box2.querySelectorAll(".apple")
