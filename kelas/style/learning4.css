@@ -19,26 +19,112 @@ section {
 	font-size: 2rem;
 }
 
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #fff;
+	padding: 0.5rem;
+}
+
 .numbers {
 	height: 100px;
-	background-color: #fff;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 0.5rem;
-	padding: 0.5rem;
+	width: 100%;
 }
-.numbers:nth-child(2){
-	grid-template-columns: repeat(6, 1fr);
+
+.numbers:nth-child(2) {
+	grid-template-columns: repeat(5, 1fr);
 }
 
 .number {
 	height: 100%;
-	aspect-ratio: 1 / 1;
 	background-color: #e2e2e2;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+}
+
+.pecah {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	translate: -50% -50%;
+	z-index: 20;
+	rotate: 45deg;
+}
+
+.pecah::after {
+	content: "";
+	/* top: 100px; */
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	border-left: 5px solid black;
+	border-top: 5px solid black;
+}
+
+.wrapper {
+	position: absolute;
+}
+
+.wrapper>div {
+	position: absolute;
+	rotate: -45deg;
+	background-color: #fff;
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	border: 3px solid black;
+	z-index: 10;
+}
+
+.wrapper>div:nth-child(1) {
+	left: -10px;
+	top: 60px;
+}
+
+.wrapper>div:nth-child(2) {
+	top: -10px;
+	left: 60px;
+}
+
+.action {
+	height: 100px;
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+}
+
+.red {
+	transform-origin: top left;
+	rotate: 32deg;
+	top: 25%;
+	left: 10%;
+	position: absolute;
+	width: 270px;
+	height: 80px;
+	outline: 3px dashed lightcoral;
+	z-index: 30;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+}
+
+.pelengkap{
+	margin-top: 4rem;
+	margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -53,5 +139,47 @@ section {
 
 	.numbers {
 		height: 70px;
+	}
+
+	.red {
+		width: 45%;
+		rotate: calc(32deg + -3deg);
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.red {
+		width: 45%;
+		rotate: calc(32deg + -1deg);
+	}
+}
+@media screen and (max-width: 500px) {
+	.red {
+		width: 49%;
+		rotate: calc(32deg + 2deg);
+	}
+}
+@media screen and (max-width: 450px) {
+	.red {
+		width: 53%;
+		rotate: calc(32deg + 10deg);
+	}
+}
+@media screen and (max-width: 450px) {
+	.red {
+		width: 53%;
+		rotate: calc(32deg + 10deg);
+	}
+}
+@media screen and (max-width: 350px) {
+	.red {
+		width: 60%;
+		rotate: calc(32deg + 14deg);
+	}
+}
+@media screen and (max-width: 300px) {
+	.red {
+		width: 70%;
+		rotate: calc(32deg + 20deg);
 	}
 }
