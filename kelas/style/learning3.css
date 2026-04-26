@@ -1,31 +1,29 @@
-		section{
-			height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: lightblue;
-			font-size: 2rem;
-			position: relative;
+		section {
+			width: 100%;
+			padding: 0 !important;
 			user-select: none;
-			position: relative;
 		}
 
 		.container {
-			background-color: #fff;
-			padding: 0.5rem;
-			display: grid;
-			grid-template-columns: auto 1fr;
-			gap: 3rem;
+			margin: 1rem auto;
+			padding: 1rem;
+			width: 35rem;
+			background-color: #ffffff;
+			position: relative;
 		}
 
 		.jawapan {
+			margin-top: 1rem;
 			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 0.5rem;
 			place-items: center;
+			display: none;
 		}
 
 		.numbers {
 			display: grid;
-			grid-template-columns: 2fr 2fr 1fr;
+			grid-template-columns: 2fr 2fr 2fr;
 			gap: 0.5rem;
 		}
 
@@ -34,7 +32,8 @@
 			margin-top: 0.5rem;
 		}
 
-		.number {
+		.number,
+		.choice {
 			background-color: #e7e7e7;
 			width: 100px;
 			height: 100px;
@@ -42,6 +41,26 @@
 			align-items: center;
 			justify-content: center;
 			position: relative;
+		}
+
+		.yellow {
+			background-color: lightgoldenrodyellow;
+			outline: 2px dashed rgb(170, 170, 35);
+		}
+
+		.CHOISE {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			display: flex;
+			opacity: 0;
+			top: 50%;
+			left: 50%;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			pointer-events: none;
+			z-index: 10;
 		}
 
 		.simbol {
@@ -59,14 +78,15 @@
 		}
 
 		.number:nth-child(1),
-		.number:nth-child(2) {
+		.number:nth-child(2),
+		.number:nth-child(3) {
 			width: 100%;
 		}
 
 		.gambar-group {
 			margin: 0.5rem 0;
 			display: grid;
-			grid-template-columns: 2fr 2fr 1fr;
+			grid-template-columns: 2fr 2fr 2fr;
 			gap: 0.5rem;
 		}
 
@@ -74,7 +94,9 @@
 		.right {
 			background-color: #e7e7e7;
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
+			padding: 0.5rem;
+			/* grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(4, 1fr); */
 			grid-template-rows: repeat(4, 1fr);
 			gap: 0.1rem;
 
@@ -83,6 +105,7 @@
 		}
 
 		.img {
+			height: 50px;
 			aspect-ratio: 1 / 1;
 			background-image: url("../imgs/apple.png");
 			background-size: contain;
@@ -95,6 +118,8 @@
 			background-size: contain;
 			position: absolute;
 			opacity: 0;
+			top: 50%;
+			left: 50%;
 			pointer-events: none;
 			animation: 0.5s gayang linear infinite alternate;
 			z-index: 10;
@@ -112,6 +137,23 @@
 			margin: 0.5rem;
 		}
 
+		.col {
+			width: 100%;
+			height: 3rem !important;
+		}
+
+		.col-3 {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			place-items: center;
+		}
+
+		.col-2 {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			place-items: center;
+		}
+
 		@keyframes gayang {
 
 			0%,
@@ -123,5 +165,11 @@
 			50% {
 				transform: rotateZ(10deg);
 				scale: 1.2;
+			}
+		}
+
+		@media screen and (max-width:600px) {
+			.container {
+				width: 100% !important;
 			}
 		}
