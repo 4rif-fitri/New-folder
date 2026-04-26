@@ -1,0 +1,154 @@
+h1,
+h2 {
+	font-weight: 600;
+}
+
+.conteiner {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+a{
+	color: blue;
+}
+
+.conteiner .title {
+	text-align: center;
+	padding: 20px 0;
+	font-size: 40px;
+	margin-bottom: 80px;
+}
+
+#timeline {
+	font-size: 14px;
+	width: 90%;
+	margin: 30px auto;
+	line-height: 1.5em;
+	position: relative;
+	transition: all 0.3s;
+}
+
+#timeline::before {
+	content: "";
+	width: 3px;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	background-color: rgb(82, 82, 82);
+	transform: translateX(-50%);
+}
+
+#timeline .timeline-item {
+	margin-bottom: 30px;
+	position: relative;
+}
+
+#timeline .timeline-item .timeline-icon {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	background-color: white;
+	border-radius: 50%;
+	margin-left: -23px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.timeline-icon img {
+	width: 70%;
+}
+
+.timeline-content {
+	width: 45%;
+	padding: 20px;
+	position: relative;
+	border-radius: 5px;
+	background-color: #fff;
+	left: 0;
+}
+
+.timeline-content h2 {
+	padding: 15px;
+	color: #000;
+	margin: -20px -20px 0 -20px;
+	grid-row: 500;
+	border-radius: 3px 3px 0 0;
+	background-color: rgb(236, 236, 236);
+}
+
+.timeline-content::before {
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: -5px;
+	width: 14px;
+	height: 14px;
+	display: block;
+	border-radius: 3px;
+	transform: rotate(45deg);
+	background-color: rgb(236, 236, 236);
+}
+
+.timeline-item.right .timeline-content {
+	left: 55%;
+}
+
+.timeline-content::before {
+	content: "";
+	position: absolute;
+	top: 10px;
+	right: -7px;
+	width: 14px;
+	height: 14px;
+	transform: rotate(45deg);
+	background-color: rgb(236, 236, 236);
+}
+
+.timeline-item.right .timeline-content::before {
+	left: -7px;
+	right: auto;
+}
+
+.disable{
+	/* pointer-events: none; */
+	opacity: 0.5;
+}
+
+@media screen and (max-width: 700px) {
+	#timeline {
+		margin: 30px;
+		padding: 0;
+	}
+
+	/* garis kiri */
+	#timeline::before {
+		left: 20px;
+		transform: none;
+	}
+
+	/* icon */
+	.timeline-item .timeline-icon {
+		left: 20px !important;
+	}
+
+	/* semua content jadi full kiri */
+	.timeline-content {
+		width: calc(100% - 60px);
+		margin-left: 60px;
+		left: 0 !important;
+	}
+
+	/* buang perbezaan kanan */
+	.timeline-item.right .timeline-content {
+		left: 0;
+	}
+
+	/* arrow semua ke kiri */
+	.timeline-content::before {
+		left: -7px;
+		right: auto;
+	}
+}
