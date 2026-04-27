@@ -1,29 +1,202 @@
-section {
-	width: 100%;
-	padding: 0 !important;
-}
-
-.content {
-	overflow: hidden;
-	height: 100%;
-	margin-top: 1rem;
-	margin: 1rem auto;
-	padding: 1rem;
-	width: 35rem;
-	background-color: #ececec;
-	position: relative;
-
-
-}
-
-
-@media screen and (max-width: 600px) {
-	body {
-		font-size: 15px;
+	section {
+		width: 100%;
+		padding: 0 !important;
 	}
-
 
 	.content {
-		width: 100%;
+		user-select: none;
+		overflow: hidden;
+		height: 100%;
+		margin-top: 1rem;
+		margin: 1rem auto;
+		padding: 1rem;
+		width: 35rem;
+		background-color: #ececec;
+		position: relative;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
-}
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		display: grid;
+		grid-template-rows: auto auto auto auto;
+	}
+
+	.col {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.col>h4 {
+		background-color: #fff;
+		border-radius: 50%;
+		padding: 1rem;
+		border: 2px solid black;
+		position: relative;
+	}
+
+	.col>h4::after {
+		content: "";
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		top: 0;
+		left: 120%;
+		rotate: 45deg;
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
+	}
+
+	.pecah {
+		width: 4rem;
+		padding-left: 1.5rem;
+		width: max-content;
+	}
+
+	.pecah>h4 {
+		margin: 3rem 0;
+		background-color: #fff;
+		border-radius: 50%;
+		width: 3.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+		aspect-ratio: 1 / 1;
+		border: 2px solid black;
+		position: relative;
+	}
+
+	.imgs {
+		width: 300px;
+		height: auto;
+		margin-left: 0.5rem;
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	.imgs>div {
+		margin: 0.5rem 0;
+	}
+
+	.top {
+		padding: 0.5rem;
+		height: auto;
+		width: 300px;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		outline: 2px dashed rgb(234, 81, 81);
+		background-color: white;
+		border-radius: 14px;
+	}
+
+	.bottom {
+		padding: 0.5rem;
+		height: auto;
+		width: 300px;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		outline: 2px dashed rgb(234, 81, 81);
+		background-color: white;
+		border-radius: 14px;
+	}
+
+	.imgs img {
+		height: 3rem;
+	}
+
+	.text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.kosong {
+		width: 90px;
+		background-color: #fff;
+		height: 5rem;
+		border-radius: 14px;
+		outline: 2px dashed black;
+	}
+
+	.choise {
+		width: 100%;
+		height: 5rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.item,.ITEM {
+		height: 100%;
+		aspect-ratio: 1 / 1;
+		background-color: #fff;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 14px;
+		outline: 2px solid black;
+	}
+	.ITEM{
+		position: absolute;
+		width: 4rem !important;
+		height: 4rem !important;
+		pointer-events: none;
+		opacity: 0;
+		left: 10px;
+		top: 10px;
+		z-index: 10;
+	}
+
+	.dialog{
+		background-color: greenyellow;
+		padding: 1rem;
+		text-align: center;
+		outline: 2px dashed green;
+		border-radius: 14px;
+	}
+
+	.higlight{
+		background-color: yellow;
+	}
+	.oren{
+		background-color: orange;
+	}
+
+	@media screen and (max-width: 600px) {
+		body {
+			font-size: 15px;
+		}
+
+
+		.content {
+			width: 100%;
+		}
+
+		.imgs,
+		.top,
+		.bottom {
+			width: 200px;
+		}
+
+		.imgs img {
+			height: 2rem;
+		}
+		.kosong {
+			width: 70px;
+			height: 4rem;
+		}
+		.item {
+			height: 70%;
+		}
+	}
