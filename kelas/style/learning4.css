@@ -22,8 +22,8 @@ section {
 .container {
 	display: flex;
 	flex-direction: column;
+	gap: 0.5rem;
 	width: 100%;
-	background-color: #fff;
 	padding: 0.5rem;
 }
 
@@ -108,7 +108,7 @@ section {
 .red {
 	transform-origin: top left;
 	rotate: 32deg;
-	top: 25%;
+	top: 26%;
 	left: 10%;
 	position: absolute;
 	width: 270px;
@@ -122,9 +122,19 @@ section {
 	font-size: 3rem;
 }
 
-.pelengkap{
+.pelengkap {
 	margin-top: 4rem;
 	margin-bottom: 0.5rem;
+}
+
+.dialog {
+	background-color: greenyellow;
+	padding: 1rem;
+	text-align: center;
+	outline: 2px dashed green;
+	border-radius: 14px;
+	margin-bottom: 1rem;
+	font-size: 18px;
 }
 
 @media screen and (max-width: 600px) {
@@ -153,30 +163,35 @@ section {
 		rotate: calc(32deg + -1deg);
 	}
 }
+
 @media screen and (max-width: 500px) {
 	.red {
 		width: 49%;
 		rotate: calc(32deg + 2deg);
 	}
 }
+
 @media screen and (max-width: 450px) {
 	.red {
 		width: 53%;
 		rotate: calc(32deg + 10deg);
 	}
 }
+
 @media screen and (max-width: 450px) {
 	.red {
 		width: 53%;
 		rotate: calc(32deg + 10deg);
 	}
 }
+
 @media screen and (max-width: 350px) {
 	.red {
 		width: 60%;
 		rotate: calc(32deg + 14deg);
 	}
 }
+
 @media screen and (max-width: 300px) {
 	.red {
 		width: 70%;
