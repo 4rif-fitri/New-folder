@@ -35,6 +35,7 @@ document.addEventListener("mouseup", e => {
 	ITEM.style.opacity = 0
 	dropZone.classList.remove("higlight")
 	isDrag = false
+	dropZone.classList.remove("oren")
 
 
 
