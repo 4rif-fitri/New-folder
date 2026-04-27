@@ -127,6 +127,10 @@
 		height: 5rem;
 		border-radius: 14px;
 		outline: 2px dashed black;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.choise {
@@ -160,10 +164,14 @@
 
 	.dialog{
 		background-color: greenyellow;
+		outline: 2px dashed green;
 		padding: 1rem;
 		text-align: center;
-		outline: 2px dashed green;
 		border-radius: 14px;
+	}
+	.betul{
+		background-color: greenyellow !important;
+		outline: 2px dashed green !important;
 	}
 
 	.higlight{
