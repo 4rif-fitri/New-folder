@@ -147,7 +147,7 @@ section {
 	background-color: greenyellow;
 	padding: 1rem;
 	text-align: center;
-	outline: 2px dashed green;
+	outline: 2px solid green;
 	border-radius: 14px;
 	font-size: 18px;
 }
@@ -160,15 +160,20 @@ section {
 	background-color: lightgoldenrodyellow;
 	outline: 2px dashed rgb(200, 200, 47);
 }
+.merah{
+	background-color: rgb(255, 97, 80) !important;
+	outline: 2px solid rgb(134, 8, 8) !important;
+}
 .hijau{
-	background-color: lightgreen;
-		outline: 2px dashed rgb(6, 181, 12);
+	background-color: lightgreen !important;
+		outline: 2px solid rgb(6, 181, 12);
 }
 .q1,.q2{
 	grid-template-columns: repeat(4, 1fr);
 }
 .low-opacity {
 	opacity: 0.5;
+	pointer-events: none;
 }
 .step1{
 	/* background-color: lightgoldenrodyellow; */
@@ -191,7 +196,7 @@ section {
 	grid-template-rows: repeat(3, auto);
 	gap: 0.5rem;
 }
-.step4{
+.step4,.step2-1{
 	/* background-color: lightskyblue; */
 		padding: 0.5rem;
 		display: grid;
@@ -204,6 +209,11 @@ section {
 	display: grid;
 	grid-template-rows: repeat(2, auto);
 	gap: 0.5rem;
+}
+.pilihan{
+	background-color: rgb(242, 242, 93);
+	border: 2px solid rgb(0, 0, 0);
+	cursor: pointer;
 }
 @media screen and (max-width: 600px) {
 	body {
